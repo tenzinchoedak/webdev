@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to left, rgba(218, 85, 81, 0.678), rgb(95, 163, 18))
+}
+main {
+  text-align: center;
+  margin-top: 40%;
+}
+input {
+  height: 50px;
+  width: 200px;
+  font-size: 25px;
+  border-radius: 3%;
+  border-style: none;
+  margin: 1rem;
+}
+input:hover {
+  box-shadow: 5px 5px 15px black;
+}
