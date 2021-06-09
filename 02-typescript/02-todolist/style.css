@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to left, rgb(235, 200, 156), rgb(199, 61, 36));
+}
+
+div {
+  text-align: center;
+  background-color: lightblue;
+  height: 600px;
+  width: 300px;
+  margin: auto;
+  margin-top: 20%;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px black;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+}
+li {
+  list-style: none;
+}
+input {
+  height: 25px;
+  margin: 5px;
+  margin-top: 2rem;
+}
+p {
+  margin: 1rem;
+}
