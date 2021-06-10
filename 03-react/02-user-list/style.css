@@ -20,3 +20,8 @@ section {
   text-align: center;
   margin-left: 12rem;
 }
+article {
+  background-color: azure;
+  margin: 2rem;
+  border-radius: 15px;
+}
