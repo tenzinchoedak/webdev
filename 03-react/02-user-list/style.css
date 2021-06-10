@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to left, rgb(192, 140, 72), rgb(64, 158, 196));
+}
+#name {
+  color: aliceblue;
+  font-size: 30px;
+  margin: 3rem;
+}
+#app {
+ text-align: center;
+ display: flex;
+}
+section {
+  text-align: center;
+  margin-left: 12rem;
+}
