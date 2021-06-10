@@ -20,6 +20,9 @@ section {
   text-align: center;
   margin-left: 12rem;
 }
+img {
+  border-radius: 50%;
+}
 article {
   background-color: azure;
   margin: 2rem;
