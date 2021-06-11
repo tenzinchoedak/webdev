@@ -25,11 +25,20 @@ const getRandomBook = (array: string[]): string => {
   const number = Math.floor(Math.random() * array.length);
   return array[number];
 };
-
+const randomColor = () => {
+  const key = "0123456789ABCDEF";
+  let color = "#";
+  for(let i = 0; i < 6; i++) {
+    color += key[Math.round(Math.random()* 15)];
+  }
+  return color;
+}
 const App = (): JSX.Element => {
 	return (
-		<p style={{ backgroundColor: "gray" }}>
-			{getRandomBook()}
+		<p style={{ 
+      backgroundColor: randomColor(),
+      }}>
+			{getRandomBook(books)}
 		</p>
 	);
 };
