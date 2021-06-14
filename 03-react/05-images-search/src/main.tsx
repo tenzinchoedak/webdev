@@ -17,7 +17,7 @@ interface ImageSearch {
 const App = (): JSX.Element => {
 	const [image, SetImage] = useState<ImageSearch[] | null>(null);
 	const [keys, setKeys] = useState("");
-	const [info] = useState("");
+	const [info, setInfo] = useState("Enter a word!");
 	const aipKey = "22075551-4fc5479137d70b93f6424a4f9";
 	const url = new URL("https://pixabay.com/api/");
 
@@ -30,14 +30,15 @@ const App = (): JSX.Element => {
 		const response = await fetch(url.toString());
 		const json = await response.json();
 		const photos = json.hits;
-		SetImage(photos)
+	SetImage(photos);
+	setInfo("sorry no image found!");
 	};
 	return (
 		<main>
 			<div className="image-card">
 				<input type="text" value={keys} onChange={(e) => {
 					setKeys(e.target.value);
-				}}/>
+				}} onFocus={() => setInfo("")}/>
 				<button
 					onClick={() => {
 						fetchImage();
@@ -46,10 +47,12 @@ const App = (): JSX.Element => {
 					Search Image
 				</button>
 			</div>
-			{image=== null
-          ? info
+			{image=== null || image.length === 0
+          ? 
+					info
           : image.map((photo) => {
               const { id, webformatURL } = photo;
+							console.log(info);
               return (
                 <li key={id}>
                   <img src={webformatURL} alt={keys} />
