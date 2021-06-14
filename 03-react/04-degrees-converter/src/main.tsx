@@ -24,15 +24,15 @@ const App = (): JSX.Element => {
 	const [b, setB] = React.useState("");
 
   const conversionF = (e:React.ChangeEvent<HTMLInputElement>) => {
-		setB(e.target.value);
+		setA(e.target.value);
 		const celsius = toInt(e.target.value) *1.8 + 32;
-		setA(celsius.toString());
+		setB(celsius.toString());
 	}
   
 	const conversionC = (e:React.ChangeEvent<HTMLInputElement>) => {
-		setA(e.target.value);
+		setB(e.target.value);
 		const fahrenheit = toInt(e.target.value)  - 32 / 1.8;
-		setB(fahrenheit.toString());
+		setA(fahrenheit.toString());
 	}
 	return (
 		<main>
@@ -40,14 +40,14 @@ const App = (): JSX.Element => {
 				type="number"
 				value={a}
 				placeholder="C°"
-				onChange={(e) => conversionC(e)}
+				onChange={(e) => conversionF(e)}
 			/>
 			{" = "}
 			<input
 				type="number"
 				value={b}
 				placeholder="F°"
-				onChange={(e) => conversionF(e)}
+				onChange={(e) => conversionC(e)}
 			/>
 		</main>
 	);
