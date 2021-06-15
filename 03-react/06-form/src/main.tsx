@@ -23,21 +23,21 @@ function App(){
 	<form
 	onSubmit={(e) => {
 		e.preventDefault;
-	  alert(data.firstName + " "+ data.lastName +" "+ " " + data.age)
+	  alert("Fisrtname: " +data.firstName + " Lastname: "+ data.lastName +" Age: "+ data.age)
 	}} 
 	>
 		<label>Firstname</label><br/>
-		<input type="text" value={data.firstName} onChange={(e) => {e.persist();
+		<input type="text" value={data.firstName} onChange={(e) => {
 		setData((data) => ({
 			...data,firstName: e.target.value
 		}))
 		}}/><br/>
 		<label>Lastname</label><br/>
-		<input type="text" value={data.lastName}  onChange={(e) => {e.persist();
+		<input type="text" value={data.lastName}  onChange={(e) => {
 		setData((data) => ({
 			...data,lastName: e.target.value}))}}/><br/>
 		<label>Age</label><br/>
-		<input type="number" value={data.age}  onChange={(e) => {{e.persist();
+		<input type="number" value={data.age}  onChange={(e) => {{
 		setData((data) => ({
 			...data,age: parseInt(e.target.value)}))}}}/><br/>
 		<input type="submit" value="submit"/>
