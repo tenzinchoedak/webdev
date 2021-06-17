@@ -1,0 +1,45 @@
+body {
+	height: 100%;
+	font-size: 1.6em;
+	line-height: 1.5;
+	margin: 0;
+	background: linear-gradient(to left, rgb(119, 81, 81), rgb(90, 107, 124));
+}
+
+main {
+	text-align: right;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	margin-top: 3rem;
+}
+
+button {
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	background-color: #eee;
+	padding: 1em;
+	font-size: inherit;
+	cursor: pointer;
+	border-radius: 0.3em;
+}
+input {
+	height: 70px;
+	width: 15rem;
+	border-radius: 0.3em;
+	font-size: inherit;
+}
+button:hover {
+	background-color: black;
+	color: white;
+}
+
+li {
+	margin: auto;
+	display:inline-block;
+	width: 50%;
+}
+img {
+margin: 2rem;
+}
