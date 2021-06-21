@@ -13,30 +13,6 @@ interface TodoItem {
 	created: number
 }
 
-
-
-
-/*/
-
-
-const sortTodos = () => 
-	state.todos.sort((a,b) => a.title.localeCompare(b.title));
-
-	const filteredTodos = () => {
-		switch(state.filter) {
-			case "All":
-				return state.todos;
-			case "Done":
-				return state.todos.filter((it) => it.done);
-			case "To do":
-				return state.todos.filter((it) => !it.done);
-			default:
-				throw new Error("Unexpected filter.");
-		}
-	};
-/*/
-
-
 function App(){
 
  const saveLocal = localStorage.getItem("todos");

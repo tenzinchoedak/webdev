@@ -6,8 +6,7 @@ import {
 	Route,
 } from "react-router-dom";
 import * as ReactDOM from "react-dom";
-import Dogs from "./components/Dogs";
-import Cat from "./components/Cat";
+import User from "./components/User";
 import Home from "./components/Home";
 
 const appDiv = document.getElementById("app");
@@ -18,27 +17,9 @@ if (!(appDiv instanceof HTMLDivElement)) {
 
 export default function App() {
 	return (
-		<HashRouter>
-			<nav>
-				<ul>
-					<li>
-						<Link to="/">❤️ Home</Link>
-					</li>
-					<li>
-						<Link to="/cat">🐱 Cat</Link>
-					</li>
-					<li>
-						<Link to="/dogs/husky">🐶 Huskies</Link>
-					</li>
-					<li>
-						<Link to="/dogs/pug">🐶 Pugs</Link>
-					</li>
-				</ul>
-			</nav>
-
+		<HashRouter>	
 			<Switch>
-				<Route path="/cat" children={<Cat />} />
-				<Route path="/dogs/:breed" children={<Dogs />} />
+				<Route path="/user/:username" children={<User />} />
 				<Route path="/" children={<Home />} />
 			</Switch>
 		</HashRouter>
