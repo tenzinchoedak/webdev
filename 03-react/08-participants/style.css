@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(to right, rgb(180, 123, 37), rgb(64, 206, 95));
+}
+li {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+}
+img {
+  height: 200px;
+  border-radius: 50%;
+  margin: 15px;
+}

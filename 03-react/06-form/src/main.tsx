@@ -11,7 +11,7 @@ const appDiv = document.getElementById("app");
  }
 
 function App(){
-
+  
 	const [data, setData] = React.useState<UserForm>({
 		firstName: "",
 		lastName: "",
